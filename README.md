@@ -62,5 +62,5 @@ A data analysis project that tracks global COVID-19 trends over time using real-
 
 ---
 
-*Author: Your Name*  
+*Author: Jonah Tarus*  
 *Date: May 2025*
