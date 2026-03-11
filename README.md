@@ -1,64 +1,115 @@
 # 🦠 COVID-19 Global Data Tracker
 
-A data analysis project that tracks global COVID-19 trends over time using real-world data. This project analyzes confirmed cases, deaths, and vaccination progress across selected countries and presents insights through visualizations.
+> Exploratory data analysis of global COVID-19 trends across **Kenya, USA, and India** —  
+> tracking confirmed cases, deaths, and vaccination progress over time.
+
+---
+
+## 📌 Project Overview
+
+This project analyzes real-world COVID-19 data to uncover how the pandemic evolved differently across three countries with vastly different population sizes, healthcare systems, and geographic contexts. The analysis covers the full arc of the pandemic — from early outbreaks through vaccine rollouts — and presents findings through clear, informative visualizations.
+
+**Countries Analyzed:** 🇰🇪 Kenya &nbsp;|&nbsp; 🇺🇸 USA &nbsp;|&nbsp; 🇮🇳 India
 
 ---
 
 ## 🎯 Project Objectives
 
-- Import and clean COVID-19 global data.
-- Analyze time-based trends: total cases, deaths, and vaccinations.
-- Compare key metrics across selected countries (e.g., Kenya, USA, India).
-- Visualize data using line plots, bar charts, and optional maps.
-- Present findings clearly in a report-style notebook.
+- Import, clean, and preprocess COVID-19 global time-series data
+- Analyze trends in total cases, daily new cases, deaths, and vaccinations
+- Compare pandemic trajectories across Kenya, USA, and India
+- Visualize key metrics using line plots and bar charts
+- Summarize findings in a structured, report-style notebook
 
 ---
 
-## 🧰 Tools & Libraries Used
+## 📁 Repository Structure
 
-- **Python**
-- **Pandas** – for data manipulation
-- **Matplotlib** – for data visualization
-- **Seaborn** – for enhanced plotting
-- **Jupyter Notebook** – for code and reporting
-- *(Optional)* Plotly / GeoPandas – for interactive or geographical maps
+```
+Data-Analysis/
+│
+├── covid_19.ipynb        # Main analysis notebook
+└── README.md
+```
 
 ---
 
-## 🚀 How to Run / View the Project
+## 🌍 Country Comparison Snapshot
 
-1. Clone this repository:
+| Metric | 🇰🇪 Kenya | 🇺🇸 USA | 🇮🇳 India |
+|--------|-----------|---------|----------|
+| Population | ~55M | ~331M | ~1.4B |
+| Peak case period | Mid-2021 | Winter 2020–21 | Apr–May 2021 |
+| Vaccination impact | Moderate rollout | Strong & early | Large-scale but gradual |
+| Overall case count | Lowest of the three | Highest total cases | Highest single-day spikes |
+
+---
+
+## 📊 Key Insights
+
+- 🇺🇸 **USA** recorded the highest total confirmed COVID-19 cases across all dates analyzed, driven by its large population and early widespread transmission.
+- 🇮🇳 **India** experienced dramatic case spikes during the devastating Delta wave in April–May 2021, but subsequently launched one of the world's largest vaccination campaigns.
+- 🇰🇪 **Kenya** showed lower overall case counts but exhibited clear pandemic waves that aligned with global trends.
+- 💉 **Vaccination rollouts** across all three countries correlated with a significant decline in reported deaths, reinforcing the real-world impact of immunization programs.
+- 📈 Time-series visualization revealed that wave patterns differed notably by country, reflecting differences in policy response, population density, and variant timing.
+
+---
+
+## 🧰 Tools & Libraries
+
+| Tool | Purpose |
+|------|---------|
+| Python 3.x | Core language |
+| Pandas | Data loading, cleaning, and manipulation |
+| Matplotlib | Line plots, bar charts, time-series visualization |
+| Seaborn | Enhanced statistical visualizations |
+| Jupyter Notebook | Interactive analysis and reporting |
+| Plotly / GeoPandas *(optional)* | Interactive and geographical maps |
+
+---
+
+## 📥 Dataset
+
+- **Source:** [Our World in Data — COVID-19 Dataset](https://github.com/owid/covid-19-data/tree/master/public/data)
+- **File:** `owid-covid-data.csv`
+- **Coverage:** Global daily data including cases, deaths, vaccinations, and population metrics
+- **How to get it:** Download directly from the link above and place `owid-covid-data.csv` in the project root folder before running the notebook.
+
+---
+
+## 🚀 How to Run
+
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/covid19-data-tracker.git
+   git clone https://github.com/Setur413/Data-Analysis.git
+   cd Data-Analysis
    ```
 
-2. Navigate to the project folder:
-   ```bash
-   cd covid19-data-tracker
-   ```
-
-3. Make sure you have the required libraries:
+2. **Install dependencies**
    ```bash
    pip install pandas matplotlib seaborn jupyter
    ```
 
-4. Open the notebook:
+3. **Download the dataset**  
+   Get `owid-covid-data.csv` from [Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data) and place it in the project root.
+
+4. **Launch the notebook**
    ```bash
    jupyter notebook
    ```
-   Then open `covid19_analysis.ipynb` and run the cells.
+   Open `covid_19.ipynb` and run all cells.
 
-5. *(Optional)* Export the notebook to PDF using `File → Download As → PDF via LaTeX`.
+5. *(Optional)* Export to PDF via `File → Download As → PDF via LaTeX`
 
 ---
 
-## 📊 Insights & Reflections
+## 📌 Potential Improvements
 
-- The USA had the highest total COVID-19 cases across all dates tracked.
-- India showed rapid case spikes during early 2021 but also had a strong vaccination rollout.
-- Kenya's trends were lower overall but reflected clear pandemic waves.
-- Vaccination significantly reduced the number of new deaths in all countries after rollout.
-- This project reinforced the value of visual data storytelling and real-world datasets.
+- [ ] Add interactive Plotly charts for dynamic trend exploration
+- [ ] Include a choropleth world map showing case density by country
+- [ ] Extend analysis to more countries or continents
+- [ ] Add a death rate and case fatality rate (CFR) comparison
+- [ ] Automate data refresh by pulling directly from the OWID API
 
 ---
 
